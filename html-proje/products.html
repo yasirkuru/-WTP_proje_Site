@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gülcan Ticaret</title>
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!--  Bar  -->
+<header>
+  <div class="grid-1">
+    <div class="header_h1">
+      <h1>Gülcan Ticaret</h1>
+    </div>
+    <div class="header_nav">
+      <nav>
+        <ul>
+          <li><a href="main.html">Ana Sayfa</a></li>
+          <li><a href="#contact">İletişim</a></li>
+          <li><a href="products.html">Ürünler</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="grid-2">
+    <ul id="auth-buttons">
+      <li class="button-item">
+        <a href="sing.html">
+          <i class="fa fa-shopping-cart"></i> Giriş
+        </a>
+      </li>
+      <li class="button-item">
+        <a href="login-İlk.html">
+          <i class="fa fa-user"></i> Kayıt Ol
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</header>
+<section id="products" class="A">
+  <!-- Sayfa Başlığı -->
+  <div class="pHeader">
+    <div class="p_pHeader">
+      <a href="main.html">
+        <button class="transparent" id="prevBtn"> &#10094;</button>
+      </a>
+      <h1>Ürünler</h1>
+    </div>
+    <div class="p_pHeader_alt">
+      <ul>
+        <li><a href="main.html"> Anasayfa </a></li>
+        <li> Ürünler</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="B">
+    <!-- Damacana Ürünler Bölümü -->
+
+    <div class="C" id="damacana">
+      <div class="product-category-container-H">
+        <h2>Damacana</h2>
+      </div>
+
+
+      <div class="D">
+        <!-- Ürün 1 -->
+        <div class="product-card">
+          <img src="img/denek2.png" alt="Pınar Su Damacana">
+          <h3>Akdoruk Su Damacana</h3>
+          <p>19L</p>
+          <p>20 TL</p>
+          <button class="btn" onclick="addToCart('Akdoruk Su Damacana', 20, 'img/denek2.png')">Sipariş Ver</button>
+        </div>
+
+        <!-- Ürün 2 -->
+        <div class="product-card">
+          <img src="img/camdamacana3.png" alt="Pınar Cam Damacana">
+          <h3>Akdoruk Su Cam Damacana</h3>
+          <p>15L</p>
+          <p>30 TL</p>
+          <button class="btn" onclick="addToCart('Akdoruk Cam Damacana', 30, 'img/camdamacana3.png')">Sipariş Ver</button>
+        </div>
+
+      </div>
+    </div>
+    <!-- Pet Ürünler Bölümü -->
+    <div class="C" id="pet">
+      <div class="product-category-container-H">
+        <h2>PET</h2>
+      </div>
+      <div class="D">
+        <!-- Ürün 3-->
+        <div class="product-card">
+          <img src="img/download.webp" alt="Pınar Cam Damacana">
+          <h3>Akdoruk Bardak Su</h3>
+          <p>0.5L</p>
+          <p>1 TL</p>
+          <button class="btn" onclick="addToCart('Akdoruk Bardak Su', 1, 'img/download.webp')">Sipariş Ver</button>
+        </div>
+
+        <!-- Ürün 4-->
+        <div class="product-card">
+          <img src="img/pinar-su-500ml-adtpng-16-10-2024-12-06-54webp_18-10-2024_13-06-23.webp"
+               alt="Pınar Cam Damacana">
+          <h3>Akdoruk Su Pet Şişe</h3>
+          <p>1L</p>
+          <p>2 TL</p>
+          <button class="btn"
+                  onclick="addToCart('Akdoruk Su Pet Şişe 1L', 2, 'img/pinar-su-500ml-adtpng-16-10-2024-12-06-54webp_18-10-2024_13-06-23.webp')">Sipariş Ver
+          </button>
+        </div>
+        <!-- Ürün 5 -->
+        <div class="product-card">
+          <img src="img/pinar-su-15l-adt-copypng_28-11-2024_14-00-05.png" alt="Pınar Cam Damacana">
+          <h3>Akdoruk Su Pet Şişe</h3>
+          <p>1.5L</p>
+          <p>3 TL</p>
+          <button class="btn"
+                  onclick="addToCart('Akdoruk Su Pet Şişe 1.5L', 3, 'img/pinar-su-15l-adt-copypng_28-11-2024_14-00-05.png')">
+            Sipariş Ver
+          </button>
+        </div>
+        <!-- Ürün 6 -->
+        <div class="product-card">
+          <img src="img/pinar-su-5lpng_16-10-2024_12-10-43.png" alt="Pınar Cam Damacana">
+          <h3>Akdoruk Su Pet Şişe</h3>
+          <p>5L</p>
+          <p>10 TL</p>
+          <button class="btn"
+                  onclick="addToCart('Akdoruk Su Pet Şişe 5L', 10, 'img/pinar-su-5lpng_16-10-2024_12-10-43.png')">Sipariş Ver
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tüp Ürünler Bölümü -->
+    <div class="C" id="tup">
+
+      <div class="product-category-container-H">
+        <h2>Ev Tüpleri</h2>
+      </div>
+
+
+      <div class="D">
+        <!-- Ürün 7 -->
+        <div class="product-card">
+          <img src="img/aygaz-tombul_ev.png" alt="Pınar Su Damacana">
+          <h3>Aygaz Tombul Ev Tüpü</h3>
+          <p>12 Kg</p>
+          <p>300 TL</p>
+          <button class="btn2" onclick="addToCart('Aygaz Tombul Ev Tüpü 12 Kg', 300, 'img/aygaz-tombul_ev.png')">Sipariş Ver
+          </button>
+        </div>
+        <!-- Ürün 8 -->
+        <div class="product-card">
+          <img src="img/aygaz-uzun-vanali-ev-tupu.png" alt="Pınar Cam Damacana">
+          <h3>Aygaz Vanalı Uzun Ev Tüpü</h3>
+          <p>12 Kg</p>
+          <p>310 TL</p>
+          <button class="btn2"
+                  onclick="addToCart('Aygaz Vanalı Uzun Ev Tüpü 12 Kg', 310, 'img/aygaz-uzun-vanali-ev-tupu.png')">Sipariş Ver
+          </button>
+        </div>
+        <!-- Ürün 9 -->
+        <div class="product-card">
+          <img src="img/mini_valfli_uzun_ev_tupu-(1).png" alt="Pınar Cam Damacana">
+          <h3>Aygaz Mini Valfli Uzun Ev Tüpü</h3>
+          <p>12 Kg</p>
+          <p>310 TL</p>
+          <button class="btn2"
+                  onclick="addToCart('Aygaz Mini Valfli Uzun Ev Tüpü 12 Kg', 310, 'img/mini_valfli_uzun_ev_tupu-(1).png')">Sipariş Ver
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <!-- Küçük Tüp Ürünler Bölümü -->
+    <div class="C" id="kucuktup">
+      <div class="product-category-container-H">
+        <h2>Küçük Tüpler</h2>
+      </div>
+
+
+      <div class="D">
+        <!-- Ürün 10 -->
+        <div class="product-card">
+          <img src="img/aygaz-mini-tup.jpg" alt="Pınar Su Damacana">
+          <h3>Aygaz Mini</h3>
+          <p>2 Kg</p>
+          <p>150 TL</p>
+          <button class="btn2" onclick="addToCart('Aygaz Mini 2 Kg', 150 , 'img/aygaz-mini-tup.jpg')">Sipariş Ver
+          </button>
+        </div>
+
+        <!-- Ürün 11 -->
+        <div class="product-card">
+          <img src="img/aygaz-kamp-dar-cemberli.jpg" alt="Pınar Cam Damacana">
+          <h3>Aygaz Dar Çemberli Küçük Tüp</h3>
+          <p>2 Kg</p>
+          <p>130 TL</p>
+          <button class="btn2"
+                  onclick="addToCart('Aygaz Dar Çemberli Küçük Tüp 2 Kg', 150 , 'img/aygaz-kamp-dar-cemberli.jpg')">Sipariş Ver
+          </button>
+        </div>
+        <!-- Ürün 12 -->
+        <div class="product-card">
+          <img src="img/aygaz-kamp-genis-cemberli.jpg" alt="Pınar Cam Damacana">
+          <h3>Aygaz Geniş Çemberli Küçük Top</h3>
+          <p>2 Kg</p>
+          <p>130 TL</p>
+          <button class="btn2"
+                  onclick="addToCart('Aygaz Geniş Çemberli Küçük Top 2 Kg', 150 , 'img/aygaz-kamp-genis-cemberli.jpg')">
+            Sipariş Ver
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <!-- Sanayi Tüp Ürünler Bölümü -->
+    <div class="C" id="sanayitup">
+      <div class="product-category-container-H">
+        <h2>Aygaz İş Yeri Tüpleri</h2>
+      </div>
+
+
+      <div class="D">
+        <!-- Ürün 13 -->
+        <div class="product-card">
+          <img src="img/aygaz-sanayi-tupu.png" alt="Pınar Su Damacana">
+          <h3>Aygaz İş Yeri Tüpü</h3>
+          <p>30 Kg</p>
+          <p>750 TL</p>
+          <button class="btn2" onclick="addToCart('Aygaz  İş Yeri Tüpü 30 Kg', 750 , 'img/aygaz-sanayi-tupu.jpg')">
+            Sipariş
+            Ver
+          </button>
+        </div>
+
+        <!-- Ürün 14 -->
+        <div class="product-card">
+          <img src="img/aygaz-tombul-ticari.jpg" alt="Pınar Cam Damacana">
+          <h3>Aygaz Uzun İş Yeri Tüpü</h3>
+          <p>40 Kg</p>
+          <p>1250 TL</p>
+          <button class="btn2" onclick="addToCart('Aygaz Uzun İş Yeri Tüpü 40 Kg', 1250 , 'img/aygaz-sanayi-tupu.jpg')">
+            Sipariş Ver
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer Başlangıcı -->
+
+
+<footer class="footer" id="contact">
+
+  <div class="yirtik-kenar2">
+    <img src="img/border-1.png" class="border-1">
+    <img src="img/border-2.png" class="border-2">
+  </div>
+
+  <!-- Footer Başlangıcı -->
+
+    <div class="footer-container">
+      <!-- İletişim Bilgileri -->
+      <div class="footer-section contact">
+        <h3>İletişim</h3>
+        <p><strong>Adres:</strong> <a href="https://maps.google.com/?q=aygaz+bayii+gülcan+ticaret" target="_blank">Aydoğdu, Hürriyet Cd. No:87 B, 09800 Nazilli/Aydın</a></p>
+        <p><strong>Telefon:</strong> <a href="tel:+905389173445" target="_blank" >+90 549 817 56 66</a></p>
+        <p><strong>E-posta:</strong> <a href="mailto:230912019@alparslan.edu.tr" target="_blank" >info@gulcanticaretsu.com</a></p>
+      </div>
+
+      <!-- Hızlı Bağlantılar -->
+      <div class="footer-section quick-links">
+        <h3>Hızlı Bağlantılar</h3>
+        <ul>
+          <li><a href="main.html">Ana Sayfa</a></li>
+          <li><a href="products.html">Ürünler</a></li>
+          <li><a href="#contact">İletişim</a></li>
+
+        </ul>
+      </div>
+
+      <!-- Sosyal Medya Bağlantıları -->
+      <div class="footer-section social-media">
+        <h3>Sosyal Medya</h3>
+        <ul>
+          <li><a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.x.com" target="_blank" class="twitter"><i class="fab fa-x"></i></a></li>
+          <li><a href="https://www.linkedin.com" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Alt Bilgi (Telif Hakkı) -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Aygaz Bayii Gülcan Ticaret. Tüm Hakları Saklıdır.</p>
+      <p><a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Şartları</a></p>
+    </div>
+  </footer>
+
+<script>
+  function addToCart(name, price, image) {
+    const userRole = localStorage.getItem('userRole');
+    if (userRole !== 'user') {  // Eğer kullanıcı rolü "user" değilse
+      alert('Lütfen giriş yapınız.');
+      return;
+    }
+
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let product = {
+      name: name,
+      price: price,
+      image: image,
+      quantity: 1
+    };
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Ürün sepete eklendi!');
+  }
+
+  window.onload = function() {
+    const userRole = localStorage.getItem('userRole');
+    if (userRole !== 'user') {  // Eğer kullanıcı rolü "user" değilse
+      let buttons = document.querySelectorAll(".btn, .btn2");
+      buttons.forEach(button => {
+        button.disabled = true;
+      });
+    }
+  };
+</script>
+
+<script src="js/main.js" defer></script>
+<script src="js/open.js" defer></script>
+<script src="js/oturum.js" defer></script>
+
+</body>
+</html>

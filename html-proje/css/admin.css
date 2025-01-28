@@ -1,0 +1,127 @@
+/* Main Container */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 15% auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 5px gray, 0 0 10px gray; /* Ahşap kahverengini andıran gölge */
+  border-radius: 8px;
+  font-family: 'Playfair Display', serif;
+}
+
+.container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px; /* Tabloya border-radius ekledim */
+  overflow: hidden; /* Kenarlardaki yuvarlama efekti düzgün gözükmesi için */
+}
+
+.container table th, .container table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Tablo Başlıkları */
+.container table th {
+  background-color: #FFD700; /* Altın rengi arka plan */
+  color: #4B2E00; /* Koyu kahverengi metin (altınla uyumlu) */
+  border: 3px solid #FFB300; /* Altın rengi kenar */
+  font-size: 18px;
+  text-align: left;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* Tablo Satırları */
+.container table tr:nth-child(even) {
+  background-color: #fff8e1; /* Hafif krem rengi */
+}
+
+.container table tr:hover {
+  background-color: #ffecb3; /* Hoverda daha açık krem rengi */
+}
+
+/* Form Alanları */
+.container form {
+  width: 25%;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: white; /* Beyaz arka plan */
+  border: 1px solid #ccc; /* Altın rengi kenar */
+  border-radius: 8px; /* Form için border-radius */
+  transition: all 0.3s ease; /* Yumuşak geçiş efekti */
+  box-shadow: 0 0 5px gray, 0 0 10px gray; /* Ahşap kahverengini andıran gölge */
+}
+
+/* Form Etiketleri */
+.container form label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #4B2E00; /* Koyu kahverengi metin */
+}
+
+/* Form Input ve Button */
+.container form input {
+  border: 2px solid #ccc;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: white; /* Beyaz arka plan */
+  transition: border 0.3s ease, padding 0.3s ease;
+  outline: none;
+}
+
+.container form input:focus{
+  border: 2px solid #FFB300; /* Altın rengi kenar */
+  outline: none;
+  padding: 15px 15px 15px 20px;
+  transition: all 0.3s ease; /* Yumuşak geçiş efekti */
+}
+
+.container form button {
+  padding: 12px 20px;
+  background-color: #FFD700; /* Altın rengi arka plan */
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Yumuşak geçiş efekti */
+}
+
+.container form button:hover {
+  background-color: #FFB300; /* Hoverda daha koyu altın */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .container h2 {
+    font-size: 24px;
+  }
+
+  .container form input, .container form button {
+    font-size: 14px;
+  }
+
+  .container table th, .container table td {
+    font-size: 14px;
+  }
+}

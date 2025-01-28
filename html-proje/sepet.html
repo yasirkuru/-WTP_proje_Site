@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gülcan Ticaret</title>
+  <link rel="stylesheet" href="css/sepet.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!--  Bar  -->
+<header>
+  <div class="grid-1">
+    <div class="header_h1">
+      <h1>Gülcan Ticaret</h1>
+    </div>
+    <div class="header_nav">
+      <nav>
+        <ul>
+          <li><a href="main.html">Ana Sayfa</a></li>
+
+          <li><a href="products.html">Ürünler</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="grid-2">
+    <ul id="auth-buttons">
+      <li class="button-item">
+        <a href="sing.html">
+          <i class="fa fa-shopping-cart"></i> Giriş
+        </a>
+      </li>
+      <li class="button-item">
+        <a href="login-İlk.html">
+          <i class="fa fa-user"></i> Kayıt Ol
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</header>
+
+<section id="cart">
+  <table>
+    <thead>
+    <tr>
+      <th>Ürün Resmi</th>
+      <th>Ürün Adı</th>
+      <th>Fiyat</th>
+      <th>Adet</th>
+      <th>Toplam</th>
+      <th>Sil</th>
+    </tr>
+    </thead>
+    <tbody id="cart-items"></tbody>
+  </table>
+  <div id="cart-summary">
+    <p>Toplam Fiyat: <span id="total-price">0 TL</span></p>
+    <button id="checkout-btn">Siparişi Onayla</button>
+  </div>
+</section>
+
+<script>
+  function loadCart() {
+    const userRole = localStorage.getItem('userRole');
+    if (userRole !== 'user') {
+      alert('Lütfen giriş yapınız.');
+      window.location.href = 'login-İlk.html'; // Giriş sayfasına yönlendirme
+      return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+    let totalPrice = 0;
+
+    cart.forEach((item, index) => {
+      let row = document.createElement('tr');
+      row.innerHTML = `
+        <td><img src="${item.image}" alt="${item.name}" width="50"></td>
+        <td>${item.name}</td>
+        <td>${item.price} TL</td>
+        <td>
+            <button onclick="decreaseQuantity(${index})">-</button>
+            <span>${item.quantity}</span>
+            <button onclick="increaseQuantity(${index})">+</button>
+        </td>
+        <td>${item.price * item.quantity} TL</td>
+        <td><button onclick="removeFromCart(${index})">Sil</button></td>
+      `;
+      cartItems.appendChild(row);
+      totalPrice += item.price * item.quantity;
+    });
+
+    document.getElementById('total-price').innerText = totalPrice + ' TL';
+  }
+
+  function increaseQuantity(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart[index].quantity++;
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+  }
+
+  function decreaseQuantity(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart[index].quantity > 1) {
+      cart[index].quantity--;
+    } else {
+      cart.splice(index, 1); // Adet 1'den küçükse ürünü sepetten sil
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+  }
+
+  function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+  }
+
+  document.getElementById('checkout-btn').addEventListener('click', function() {
+    if (!localStorage.getItem('cart') || JSON.parse(localStorage.getItem('cart')).length === 0) {
+      alert('Sepetiniz boş.');
+      return;
+    }
+
+    // Sipariş onaylanınca sepet içeriğini localStorage'da sakla ve sipariş sayfasına yönlendir
+    localStorage.setItem('order', localStorage.getItem('cart'));
+    localStorage.removeItem('cart');
+    window.location.href = 'sipariş.html';
+  });
+
+
+  window.onload = loadCart;
+</script>
+
+<script src="js/main.js" defer></script>
+<script src="js/open.js" defer></script>
+<script src="js/oturum.js" defer></script>
+
+</body>
+</html>

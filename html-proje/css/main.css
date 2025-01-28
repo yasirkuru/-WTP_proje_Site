@@ -1,0 +1,284 @@
+
+.yirtik-kenar {
+  position: absolute;
+  bottom: -40px; /* Alt kenara hizalar */
+  left: 0;
+  width: 100%;
+  height: 50px; /* Yırtık kenarın yüksekliği */
+  overflow: hidden;
+
+}
+
+.yirtik-kenar img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* Görselin genişliğini artırarak tekrarları azalt */
+  height: 100%; /* Görselin yüksekliğini tam kapsayacak şekilde ayarlayın */
+  animation: hareket 30s linear infinite; /* Animasyon süresini uzatarak daha akıcı hale getir */
+  filter: brightness(0) invert(1); /* Görselleri aynı renge dönüştür */
+}
+
+.border-1 {
+  z-index: 1; /* Arka plan görseli */
+  opacity: 1; /* Tam görünürlük */
+}
+
+.border-2 {
+  z-index: 2; /* Ön plan görseli */
+  opacity: 1; /* Tam görünürlük */
+}
+
+@keyframes hareket {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Görselin sürekli kaymasını sağlar */
+  }
+}
+
+/* === Main (Ana Menü) Ayarları === */
+
+main {
+  margin: 0;
+  padding: 0;
+  display: flex; /* Esnek düzen kullanımı */
+  flex-direction: column; /* Yukarıdan aşağı sıralama yapar */
+  width: 100%;
+
+}
+
+#home {
+  background: url('../img/tup1.webp') no-repeat center center; /* Arka plan resmi */
+  background-size: cover; /* Arka planın tamamını kaplayacak şekilde ayarla */
+  height: 100vh; /* Sayfa yüksekliği */
+  position: relative; /* Pozisyonlama için gerekli */
+  overflow: hidden; /* Taşan içeriği gizleyin */
+}
+
+
+
+
+#products1 {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center; /* Yatayda ortalama */
+  align-items: center; /* Dikeyde ortalama */
+
+}
+
+.products1_A {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  height: 66%;
+  width: 85%;
+
+
+}
+
+.products1_B {
+  margin: 10px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+
+
+}
+
+.product1-C {
+
+  box-shadow: 0 0 5px gray, 0 0 10px gray; /* Ahşap kahverengini andıran gölge */
+
+  background-repeat: no-repeat; /* Resmin tekrar etmesini engeller */
+  text-align: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: flex;
+  margin: 5px;
+  background-color: rgb(243, 246, 250); /* Hafif şeffaf bir arka plan */
+  height: 100%;
+  width: 55%;
+  border-radius: 25px;
+}
+
+#waterbackground {
+  background-image: url("../img/u2.jpg");
+  background-position: center; /* Resmin ortasını konumlandırır */
+  background-size: 250%; /* Resmi büyüterek kesilmesini sağlar */
+}
+
+#gasbackground {
+  background-image: url("../img/u1.jpg");
+  background-position: left; /* Resmin ortasını konumlandırır */
+  background-size: 252%; /* Resmi büyüterek kesilmesini sağlar */
+}
+
+
+.product1-C h3 {
+  margin: 3%;
+
+  text-align: left;
+  font-size: 200%;
+
+}
+
+.product1-C button {
+  opacity: 0.9; /* Hafif saydamlık */
+  display: inline-flex;; /* Butonun inline-block olması gerekir */
+  padding: 1%;
+  align-items: center; /* Dikeyde ortalar */
+  justify-content: center; /* Yatayda ortalar */
+  margin: 13% 3% 3% 3%;
+  height: 8%;
+  width: 65%;
+  background-color: #E3F2FD; /* Hafif mavi */
+  color: #0D47A1; /* Koyu mavi metin */
+  border: 3px solid #42A5F5; /* Mavi kenar */
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.5s ease; /* Geçiş efektleri */
+
+}
+
+.product1-C:hover button {
+  background-color: #90CAF9; /* Daha koyu mavi */
+  color: #FFFFFF; /* Beyaz metin */
+  border: 3px solid #1E88E5; /* Daha koyu kenar */
+
+}
+.product1-C:hover .tupbutton {
+  background-color: #FFB74D; /* Daha koyu turuncu */
+  color: #FFFFFF; /* Beyaz metin */
+  border: 3px solid #F4511E; /* Koyu kenar */
+}
+.product1-C:hover i {
+  transform: translateX(15px);
+
+}
+
+.product1-C button:active {
+  transform: scale(0.98); /* Tıklanıldığında hafif küçülme efekti */
+  transition: transform 0.1s ease; /* Küçülme animasyonu */
+}
+
+.product1-C button i {
+  margin-left: 8%; /* İkon ile yazı arasına boşluk ekler */
+  margin-right: 2%;
+  display: inline-block;
+  font-size: 22px; /* İkon boyutunu ayarlar */
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.product1-D {
+  text-align: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: flex;
+  margin: 5px;
+  height: 100%;
+  width: 45%;
+  border-radius: 25px;
+  transition: transform 0.3s ease; /* Animasyon ekledik */
+}
+
+.product1-E {
+  box-shadow: 0 0 5px gray, 0 0 10px gray; /* Ahşap kahverengini andıran gölge */
+  background-size: 30%; /* Resmi büyüterek kesilmesini sağlar */
+  background-repeat: no-repeat; /* Resmin tekrar etmesini engeller */
+  background-position: center;
+  background-position-x: 150px;
+  text-align: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: flex;
+  margin: 5px;
+  background-color: rgb(243, 246, 250); /* Hafif şeffaf bir arka plan */
+  border-radius: 25px;
+  transition: transform 0.3s ease; /* Animasyon ekledik */
+  height: 25%;
+
+}
+
+.product1-E h4 {
+  margin: 6%;
+
+  text-align: left;
+  font-size: 120%;
+
+}
+
+.product1-E button {
+  display: inline-flex;; /* Butonun inline-block olması gerekir */
+  padding: 1%;
+  align-items: center; /* Dikeyde ortalar */
+  justify-content: center; /* Yatayda ortalar */
+  margin: 3% 0 3% 6%;
+  height: 40%;
+  width: 20%;
+  background-color: #E3F2FD; /* Hafif mavi */
+  color: #0D47A1; /* Koyu mavi metin */
+  border: 3px solid #42A5F5; /* Mavi kenar */
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease; /* Geçiş efektleri */
+}
+
+.product1-E:hover button {
+  background-color: #90CAF9; /* Daha koyu mavi */
+  color: #FFFFFF; /* Beyaz metin */
+  border: 3px solid #1E88E5; /* Daha koyu kenar */
+
+}
+.product1-E:hover i {
+
+  transform: rotate(15deg);
+}
+
+.product1-E button:active {
+  transform: scale(0.98); /* Tıklanıldığında hafif küçülme efekti */
+  transition: transform 0.1s ease; /* Küçülme animasyonu */
+}
+
+.product1-E button i {
+  transition: transform 0.5s ease-in-out;
+  display: inline-block;
+  font-size: 18px; /* İkon boyutunu ayarlar */
+
+}
+
+/* Tüp için normal ve hover durumları */
+button.tupbutton {
+  background-color: #FFF3E0; /* Hafif turuncu */
+  color: #E65100; /* Turuncu metin */
+  border: 3px solid #FB8C00; /* Turuncu kenar */
+}
+
+.product1-E:hover button.tupbutton {
+  background-color: #FFB74D; /* Daha koyu turuncu */
+  color: #FFFFFF; /* Beyaz metin */
+  border: 3px solid #F4511E; /* Koyu kenar */
+}
+
+
+/* === Products Page Ayarları Bitti  === */
+
+
+
+
+
+
+
+
+
+

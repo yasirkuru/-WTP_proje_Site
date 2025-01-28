@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  transition: opacity 0.7s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  display: flex; /* Esnek düzen kullanımı */
+  flex-direction: column; /* Yukarıdan aşağı sıralama yapar */
+}
+body.fade-out{
+  opacity: 0;
+}
+
+h1, h2 ,h3{
+  font-family: 'Playfair Display', serif;
+}
+
+.button-item a  {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* === Header (Üst Menü) Ayarları === */
+
+header {
+  top: -100px; /* Nav bar başlangıçta görünmeyecek şekilde yukarıda */
+  left: 2%;
+  right: 2%;
+  z-index: 5;
+  height: 12%;
+}
+
+header.show {
+  top: 2%;
+}
+
+header {
+
+  box-shadow: 0 0 5px gray, 0 0 10px gray; /* Ahşap kahverengini andıran gölge */
+  position: fixed; /* Sayfa kaydırıldığında sabit kalır */
+  background-color: rgba(255, 255, 255, 0.6); /* Hafif şeffaf bir arka plan */
+  transition: all 0.7s ease-in-out; /* Animasyonlu geçiş efekti */
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* İki eşit sütun */
+  align-items: center; /* Dikey ortalama */
+  padding: 10px 5% 10px 5%; /* Header'ın iç boşluğu */
+}
+
+header.shrink {
+  border-radius: 0;
+  top: 0; /* Başlık üstte sabit kalsın */
+  left: 0; /* Sayfanın sol tarafına yasla */
+  right: 0; /* Sayfanın sağ tarafına yasla */
+  height: 10%; /* Daha kompakt bir görünüm */
+  background-color: rgba(255, 255, 255, 0.9); /* Daha opak bir arka plan */
+  z-index: 5;
+}
+
+/* Sol taraf (Grid 1) */
+.grid-1 {
+  display: flex;
+  align-items: center; /* Dikeyde ortala */
+  justify-content: flex-start; /* Solda hizala */
+  gap: 15px; /* Elemanlar arası boşluk */
+}
+
+.header_h1 h1 {
+  margin: 0;
+}
+
+
+.header_nav {
+  margin: 0;
+}
+
+nav {
+  margin: 0;
+}
+
+/* Header'daki navigasyon */
+.header_nav nav ul {
+  height: 100%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 20px; /* Menüler arası boşluk */
+}
+
+.header_nav nav ul li {
+  padding: 0;
+}
+
+/* Hover durumunda alt çizgi efekti */
+.header_nav nav ul li a {
+  position: relative;
+  padding-bottom: 6px;
+  transition: border-color 0.4s ease-in-out, padding-bottom 0.2s ease-in-out;
+}
+
+.header_nav nav ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: 0 #ffd700 solid;
+  transition: width 0.4s ease, left 0.4s ease, border-width 0.4s ease;
+  width: 0;
+}
+
+.header_nav nav ul li a:hover::before {
+  border-width: 1px;
+  width: 100%;
+  left: 0;
+}
+
+/* Container Styling */
+.grid-2 ul {
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Button Styling */
+.button-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+
+/* Icon Styling */
+.button-item a i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+.button-item a:hover {
+  background-color: #45a049;
+  border-color: #fff; /* Kenar rengi hover durumunda belirginleşir */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(69, 160, 73, 0.5); /* Glow efekti */
+  transform: scale(1.05);
+}
+
+.button-item a:hover i {
+
+  transform: rotate(15deg);
+  color: #ffd700; /* İkon rengi hover durumunda altın sarısına döner */
+  text-shadow: 0 0 5px #ffd700, 0 0 10px #ffae00; /* İkona parlama efekti */
+}
+
+
+/* === Link Ayarları === */
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+}

@@ -1,0 +1,46 @@
+
+div {
+  width: 300px;
+  margin: 20px auto;
+
+  border: 1px solid black;
+  padding: 10px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Madde işaretlerini kaldır */
+}
+
+li {
+  margin-bottom: 10px; /* Elemanlar arasında boşluk */
+}
+
+a {
+  display: block; /* Tüm genişliği kaplasın */
+  padding: 8px;
+  text-decoration: none; /* Alt çizgiyi kaldır */
+  color: black; /* Yazı rengi */
+  border: 1px solid black;
+  text-align: center; /* Metni ortalar */
+
+  background-color: #f0f0f0; /* Üzerine gelince renk değişimi */
+}
+
+a:hover {
+  background-color: black; /* Üzerine gelince renk değişimi */
+  color: #f0f0f0; /* Yazı rengi */
+}
+form {
+  width: 300px;
+  border: 1px solid black;
+  margin: 20px auto ;
+  padding: 20px;
+
+}
+label{
+  display: block;
+}
+
+
